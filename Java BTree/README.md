@@ -1,13 +1,7 @@
 # CS 321 Bioinformatics Project
 
-**Table of contents:**
-- [Starter Code](#starter-code)
-- [Scrum Process](#scrum-process)
-- [Project Requirements](#project-requirements)
-
 <hr/>
 
-# Starter Code
 This repository contains:
 - the expected project package structure, in the [src/](src/) folder
 - some partial implementation of classes, in the [src/main/java/cs321/](src/main/java/cs321/) folder
@@ -20,57 +14,9 @@ This repository contains:
     - Running classes
     - Running unit tests
 
-:heavy_exclamation_mark: **NOTE: Do NOT fork this repository**, because the forked repository
-cannot have its own GitHub issues, which will be used as Scrum tasks.
-
-:heavy_exclamation_mark: **NOTE: Do NOT modify the package structure in the [src/](src/) folder**,
-otherwise the project may not be built correctly using gradle.
-
-## Ensure you have the correct JDK version
-Use the following command to check your JDK version installed:
-```bash
-$ javac -version
-```
-
 This project **does not work** with JDK 19.
 
 Instead it is recommended to use either JDK 8, JDK 11 or JDK 17.
-
-:book: See this [wiki page for additional details regarding the supported Java versions and links to download the correct JDK versions](https://github.com/BoiseState/CS321_Bioinformatics/wiki/Install-the-correct-JDK-version).
-
-
-## One-Time Team Setup
-One team member should:
-- Create a new **private** GitHub repository and
-    - Make sure to name the private repository as specified by your instructor
-    - Give repository write permissions to all the other team members
-    - Give repository read permissions to the instructor and the tutors or teaching assistants
-	  (they will provide you with their GitHub ids)
-- Clone (**not fork**) this repository and verify that gradle can be run.
-
-```bash
-$ git clone https://github.com/BoiseState/CS321_Bioinformatics.git
-$ cd CS321_Bioinformatics
-$ ./gradlew tasks
-```
-
-The last command should perform a one-time gradle setup, followed by
-listing all the available gradle tasks and their descriptions.
-
-**NOTE:** On Windows, the `./gradlew` command should be replaced with `gradlew`
-(which will call the [`gradlew.bat`](/gradlew.bat) file)
-
-The same team member should push the cloned repository to the new private repository.  This can
-be done by changing the remote URL of the cloned repository to the new private repository's URL.
-
-```bash
-$ git remote set-url origin NEW_URL_OF_YOUR_NEW_PRIVATE_REPOSITORY
-$ git remote -v
-$ git push
-```
-
-The other team members should then clone the newly created student repository containing the
-[starter code](#starter-code).
 
 ## Compile and Run the Project from the Command Line
 Gradle allows running unit tests and code from IDEs, or the command line, as described below.
@@ -103,8 +49,6 @@ This repository is an [Eclipse](https://www.eclipse.org/) project, and can be di
 ### IntelliJ IDEA
 This project can be opened with [IntelliJ IDEA](https://www.jetbrains.com/idea/).
 
-:bulb: HINT: As a student, you can get [IntelliJ IDEA](https://www.jetbrains.com/idea/) for free ([using an academic license](https://www.jetbrains.com/community/education/#students)) by signing up with your BSU email.
-
 :book: See this [wiki page for additional instructions to run this project in IntelliJ IDEA](https://github.com/BoiseState/CS321_Bioinformatics/wiki/Instructions-to-run-in-IntelliJ-IDEA).
 
 ### VSCode
@@ -118,71 +62,6 @@ them automatically. In other words, you should not have to make any changes to t
 
 Also, you can add new test files with new tests cases in `src/test/java` and those will be run
 automatically by gradle or your IDE.
-
-<hr/>
-
-# Scrum Process
-The focus of this project is to learn about data structures, while working effectively in a group.
-In addition, given the small project scope, and the fixed set of requirements that are already
-defined (and will not need to be elicited with the use of a Product Owner), the team can
-customize the Scrum process learned in CS-HU 271 and focus exclusively on:
-- creating tasks
-- linking commits to task IDs (e.g., `Implements task #123`)
-- Test-Driven Development and unit testing. The [starter code](#starter-code) already contains a few [sample unit tests](../../CS321_Bioinformatics/src/test/java/cs321) that can be [run from the command line](#compile-and-run-the-project-from-the-command-line).
-
-## Scrum Board
-Creating the tasks upfront will allow dividing and assigning the work in order to provide
-transparency and accountability within the team.
-
-Use the [Projects](https://github.com/BoiseState/CS321_Bioinformatics/projects) tab (i.e., a simplified version
-of [ZenHub](https://www.zenhub.com)) to configure your own team Scrum board,
-based on this [project example](https://github.com/BoiseState/CS321_Bioinformatics/projects/1)
-(feel free to copy the contents of these tasks to your Scrum board).
-
-Your Scrum board should contain the following columns (pipelines):
-
-Column Name     | Description
---------------- | -----------
-Product Backlog | All (unassigned) tasks that are going to be completed by the team throughout the duration of the project
-Sprint Backlog  | Tasks proposed to be implemented in the current week (sprint), assigned to developers
-In Progress     | Tasks currently being worked on
-Review/QA       | Tasks ready to be reviewed by another team member
-Closed          | Completed tasks, whose corresponding code is integrated in the `master` branch
-
-Tasks should be assigned to the developer working on them. Each team
-member should add to the project log file, Project-Log.md, the tasks (e.g.,
-`https://github.com/StudentUserNameHostingRepo/CS321_Bioinformatics/issues/123`) completed that
-week, as described in the [progress reports](#9-progress-reports).
-
-Here is an example of a [valid task](https://github.com/BoiseState/CS321_Bioinformatics/issues/3)
-written in engineering language that is assigned to a developer. This task should be referenced
-by a commit containing a message similar to `Implements task #3`.
-
-As a warm up exercise, each team member should create a task similar to [`task
-#2`](https://github.com/BoiseState/CS321_Bioinformatics/issues/2) and then edit the
-[`README-submission.md`](/README-submission.md) file with their information.
-
-Here is a sample project log from a team from a previous semester:
-[Project-Log-sample.md](https://github.com/BoiseState/CS321_Bioinformatics/blob/master/Project-log-sample.md)
-
-<hr/>
-
-# Project Requirements
-
-
-**Table of contents:**
-- [Introduction](#1-introduction)
-- [Background](#2-background)
-- [Specifications](#3-specifications)
-- [Design Issues](#4-design-issues)
-- [Implementation](#5-implementation)
-- [Using a Cache](#6-using-a-cache)
-- [Using a Database](#7-using-a-database)
-- [Useful Examples](#8-useful-examples)
-- [Test Scripts](#9-test-scripts)
-- [Progress Reports](#10-progress-reports)
-- [Submission](#11-submission)
-
 
 <hr/>
 
@@ -387,51 +266,6 @@ The [data/queries/](data/queries/) folder contains:
 - a sample program named [`QueryGenerator.java`](data/queries/QueryGenerator.java) that
 generates random queries for testing
 
-Start off by running your tests at home. If you do need to run them on `onyx` please only run the
-smallest test (`test0.gbk`).
-
-We will setup [Amazon AWS](https://aws.amazon.com/) accounts for each student so that we can
-run larger tests in the cloud. **Running your tests on AWS is required so we can all get
-experience using the cloud.**
-
-See the section on [Testers](#testers) for automated test scripts.
-
-## 6. Using a Cache
-You should incorporate the Cache object from `Project 1` to improve the performance of your B-Tree
-implementation. The size of the Cache should be a command line argument. An entry in the Cache is a
-`BTreeNode`. With the `<1 (cache)>` command line option, the `<cache_size>` needs to be specified
-as well.
-
-:book: Report the time improvement using a cache of size `100` and `500` in your [`README-submission.md`](/README-submission.md) file.
-
-## 7. Using a Database 
-
-Design a simple database to store the results (sequences and frequencies) from the B-Tree.
-We will perform an inorder tree traversal to get the information to store in the database. This
-would be done at the end of creating the GeneBank BTree. Then we will create a separate search
-program named `GeneBankSearchDatabase` that uses the database instead of the BTree.
-
-```bash
-$ ./gradlew createJarGeneBankSearchDatabase
-$ java -jar build/libs/GeneBankSearchDatabase.jar <path_to_SQLite_database> 
-												  <query_file> [<debug_level>]
-```
-
-We will use the embedded SQLite database for this project.  The SQLite database is fully
-contained in a jar file that gradle will automatically pull down for you. See the database
-example in the section below on how to use SQLite.
-
-## 8. Useful Examples
-
-The following examples from the class examples repository will be useful for this project.
-
-- [Disk IO
-  example](https://github.com/BoiseState/CS321-resources/tree/master/examples/disk-IO-examples): In
-  particular, look at DiskReadWriteExample.java. It shows the implementation of an external binary
-  search tree on disk.
-- [SQLite example](https://github.com/BoiseState/CS321-resources/tree/master/examples/SQLite): A
-  quick starter example on how to set up and use SQLite.
-- [Bitwise operators example](https://github.com/BoiseState/CS321-resources/tree/master/examples/bitwise-operators-example): In particular, look at BitwiseShiftDemo.java for helpful sequence utility code.
 
 ## 9. Test Scripts
 
@@ -448,17 +282,7 @@ test4.gbk
 test5.gbk
 ```
 
-An optional large test file is the Y chromosome for human beings. That is a large file (but
-the smallest of all chromosomes!). To run your program on this file is optional as it may take
-a long time!! For this test, we recommend a cache size of 5,000 nodes. Note this file isan't
-available on GitHub due to their limitation on file size. You can download it from here:
-[hs_ref_chrY.gbk](https://drive.google.com/file/d/1zkAIQW8ol7HxGxNBeJTSuwES7EqPYiHx/view?usp=sharing)
-
-
-Several pre-generated query files are provided in the folder: 
-[data/files_gbk](https://github.com/BoiseState/CS321_Bioinformatics/tree/master/data/queries).
-
-In particular, results are provided for the following sample query files. 
+Results are provided for the following sample query files. 
 ```bash
 query1
 query2
@@ -509,36 +333,3 @@ to run and compare results using the three test scripts as follows.
 ```
 
 Then repeat for test5.gbk.  
-
-
-## 10. Progress Reports
-
-Each team member will fill out a progress report (via a survey) each week. The link to the
-survey will be  provided by your instuctor.
-
-In addition, each team member should log their project-related
-activities for the week, including the URL to the tasks (e.g.,
-`https://github.com/StudentUserNameHostingRepo/CS321_Bioinformatics/issues/123`) completed that
-week, in a separate file named `Project-Log.md`.
-
-Here is a sample log file:
-[Project-log-sample.md](https://github.com/BoiseState/CS321_Bioinformatics/tree/master/Project-log-sample.md)
-
-As a reminder, each commit should link (reference) in the commit message the completed task
-(e.g., `Implements task #123`), in order to automatically link the task to the commit, and make
-the code changes directly available from the task itself.
-
-It is expected that each team should have at least one meeting every week.
-
-Progress reports are confidential.
-
-## 11. Submission
-Before submission, make sure that you:
-- can clone the team repository on the `onyx` server
-- can [compile and run the program from the command line](#compile-and-run-the-project-from-the-command-line) on `onyx` and obtain the expected results (just try test0.gbk)
-- submit on onyx if your instructor requires a submission
-
-**One team member should email the URL of the team GitHub repository to the instructor and the teaching
-assistant(s).**
-
-Make sure the [instructor and the teaching assistant(s) have access to the repository](#one-time-team-setup).
