@@ -1,22 +1,11 @@
 ![CS253 Banner](images/CS253-BANNER.svg)
 # Module 12 Lab Guide
-[Lab Introduction Video](https://youtu.be/rWtosHpSOzw)
-
-### Code Style Requirements
-Please review the [CS253 Style Guide](https://docs.google.com/document/d/1zKIpNfkiPpDHEvbx8XSkZbUEUlpt8rnZjkhCSvM-_3A/edit?usp=sharing) and apply it in all lab warmups, lab activities and projects this semester. Coding Style will assessed as part of your lab and project grades.
-
-### Code Quality Requirements
-- Code must compile without warnings using the provided Makefile
-- Programs must handle unexpected user input and either reprompt (loops) or gracefully exit with a non-zero exit status.
-- Programs must handle error conditions gracefully, without crashing, ideally by checking function returns codes (if available) and returning a non-zero exit status.
-- Programs should be free of memory related errors, buffer overflows, stack smashing, leaks, etc... Whether the program crashes or not. This will be validated using valgrind.
-
 
 ## Lab Activity - Writing Basic System Tools
 ### Lab Overview
 In this lab, we will implement four of the most common command-line system tools: cat, grep, sort, and wc.  Alone, each of these tools provides minimal functionality, but when combined together using pipes, these tools become incredibly powerful. The sections below include a description of each tool, requirements and a walkthrough video showing step-by-step implementation of each tool.  
 
-Learning the C programming component is an important aspect of this activity.  Equally important is developing an understanding of how simply software tools can be developed in a modular fashion and interconnected using pipes to solve difficult problems.  After all, at its heart, Computer Science is all about problem solving. :)
+Learning the C programming component is an important aspect of this activity.  Equally important is developing an understanding of how simply software tools can be developed in a modular fashion and interconnected using pipes to solve difficult problems.
 
 ### Activity 1 - The mycat tool
 The **mycat*** tool provides a similar function to the [**cat**](https://github.com/coreutils/coreutils/blob/master/src/cat.c) tool available on most Unix/Linux based systems. It will open the file specified with the '-f' option, read the contents of the file and write the data (unaltered) to *stdout*.  If no file is specified, it will read input from *stdin* and write the data (unaltered) to *stdout*. 
@@ -204,24 +193,3 @@ banyans
 Romulus
 Ankara
 ```
-
-
-
-### Implementation Guide (Complete the following for each tool)
-1. Expand the folder named LabActivity and open the .c file for the current system tool: mycat, mygrep, mysort or mywc
-2. Enter the program code to create an application as described in the tool description
-3. Test each program using the provided [Lab Activity Test Plan](LabActivityTestPlan.md) to ensure it functions as expected.
-4. Run the program with valgrind to catch any memory leaks or errors
-5. Commit the changes to your local repository with a message stating that the tool implementation is completed.
-6. Push the changes from your local repository to the github classroom repository.
-7. Update the Coding Journal with an entry describing your experience using the steps outlined below.
-
-## Coding Journal (Optional)
-Keep a journal of your activities as you work on this lab. Many of the best engineers that I have worked with professionally have kept some sort of engineering journal. I personally packed notebooks around with me for nearly 8 years before I began keeping my notes electronically.   
-
-Your journal can track ideas, bugs, cool links, code snippets, shell commands, rants, or simply a reflection on what worked well or not-so-well with this lab activity. I will not be grading the content of your journal, but I will expect at least two timestamped journal entries of at least a 75 to 150 words each added to the provided Journal.md file.  The purpose of this component is to help develop the habit of taking notes and creating documentation while you code. The more detail you provide the better as that will help you if you ever need to refer back to this project in the future.
-
-## Markdown Resources
-Markdown is a notation that is used to format text documents.  It is widely used in Software Development shops around the world, which is why we're asking you to use it in your lab documentation.  
-
-Github provides a guide for getting started:  [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)

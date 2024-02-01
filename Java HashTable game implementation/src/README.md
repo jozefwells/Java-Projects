@@ -25,17 +25,23 @@ as a circular array does.
 
 From the directory containing all source files, compile the
 driver class with the command:
+
+``
 $ javac HashTest.java
+``
 
 Run the compile class file with the command:
+
+``
 $ java HashTest <input type> <load factor> [<debug level>]
+``
 
 Where:
-<input type>: 1 - each HashObject contains an Integer object with a random int value.
+\<input type\>: 1 - each HashObject contains an Integer object with a random int value.
               2 - each HashObject contains a Date object.
               3 - each HashObject contains a word from the word-list text file
-<load factor>: The percentage that the table should be filled to.
-[<debug level>]: The method in which the results should be printed
+\<load factor\>: The percentage that the table should be filled to.
+[\<debug level\>]: The method in which the results should be printed
               0 - results are printed to the console
               1 - results are printed to the console and are printed to two files: linear-dump and double-dump
 
@@ -85,6 +91,3 @@ Input source 3: word-list
 | 0.95  | 110.594 | 3.186  |
 | 0.98  | 324.206 | 4.020  |
 | 0.99  | 471.671 | 4.696  |
-## Sources used
-
-Class notes, Udemy coarse: Data Structures and Algorithms: Deep Dive Using Java by: Tim Buchalka and Goran Lochert 
